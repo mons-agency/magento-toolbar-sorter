@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright Mons Agency Ltd. Some rights reserved.
+ * See copying.md for details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <!-- Magento\Catalog\Block\Adminhtml\Product\Attribute\Edit\Tab\Front -->
+    <event name="adminhtml_catalog_product_attribute_edit_frontend_prepare_form">
+        <observer name="Mons_ToolbarSorter::adminhtml_catalog_product_attribute_edit_frontend_prepare_form"
+            instance="Mons\ToolbarSorter\Observer\Edit\Tab\Front\ProductAttributeFormBuildFrontTabObserver" />
+    </event>
+    <!-- Magento\Catalog\Block\Adminhtml\Product\Attribute\Grid -->
+    <event name="product_attribute_grid_build">
+        <observer name="Mons_ToolbarSorter::product_attribute_grid_build"
+            instance="Mons\ToolbarSorter\Observer\Grid\ProductAttributeGridBuildObserver" />
+    </event>
+</config>

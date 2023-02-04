@@ -1,0 +1,8 @@
+"Ascending","Ascending",module,Mons_ToolbarSorter
+"Descending","Descending",module,Mons_ToolbarSorter
+"Ascending + Descending","Ascending + Descending",module,Mons_ToolbarSorter
+"Descending + Ascending","Descending + Ascending",module,Mons_ToolbarSorter
+"Depends on design theme.","Depends on design theme.",module,Mons_ToolbarSorter
+"%s (High to Low)","%s (High to Low)",module,Mons_ToolbarSorter
+"%s (Low to High)","%s (Low to High)",module,Mons_ToolbarSorter
+"Relevance","Relevance",module,Mons_ToolbarSorter

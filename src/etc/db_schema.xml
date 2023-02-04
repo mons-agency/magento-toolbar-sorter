@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright Mons Agency Ltd. Some rights reserved.
+ * See copying.md for details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="catalog_eav_attribute" resource="default">
+        <column xsi:type="varchar"
+            name="sort_by_behavior"
+            nullable="true"
+            length="12"
+            default="asc"
+            comment="[Mons_ToolbarSorter] Product listing sorter behavior" />
+    </table>
+</schema>

@@ -1,0 +1,41 @@
+{
+    "name": "mons/magento-toolbar-sorter",
+    "description": "",
+    "require": {
+        "php": "~8.1.0||~8.2.0",
+        "magento/framework": "103.0.*",
+        "magento/module-catalog": "104.0.*",
+        "magento/module-layered-navigation": "100.4.*"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Filippo Bovo",
+            "homepage": "https://filippobovo.com",
+            "role": "Solutions architect"
+        }
+    ],
+    "keywords": [
+        "magento 2",
+        "catalog",
+        "toolbar"
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/registration.php"
+        ],
+        "psr-4": {
+            "Mons\\ToolbarSorter\\": "src/"
+        }
+    }
+}

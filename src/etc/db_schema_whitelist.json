@@ -1,0 +1,7 @@
+{
+    "catalog_eav_attribute": {
+        "column": {
+            "sort_by_behavior": true
+        }
+    }
+}

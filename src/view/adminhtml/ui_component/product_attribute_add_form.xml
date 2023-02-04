@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright Mons Agency Ltd. Some rights reserved.
+ * See copying.md for details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="front_fieldset">
+        <field name="sort_by_behavior" sortOrder="130" formElement="select">
+            <settings>
+                <notice translate="true">Customize the behavior of the sorter in Product Listing.</notice>
+                <dataType>string</dataType>
+                <label translate="true">Product Listing Sorter</label>
+                <dataScope>sort_by_behavior</dataScope>
+                <imports>
+                    <link name="visible">${ $.parentName}.used_for_sort_by:checked</link>
+                </imports>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Mons\Toolbarsorter\Model\Attribute\Source\FilterableOptions"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+    </fieldset>
+</form>

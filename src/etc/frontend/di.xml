@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright Mons Agency Ltd. Some rights reserved.
+ * See copying.md for details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Model\Config">
+        <plugin name="Mons_ToolbarSorter::Model_Config"
+            type="Mons\ToolbarSorter\Plugin\Model\ConfigPlugin"
+            sortOrder="1" />
+    </type>
+    <type name="Magento\Catalog\Block\Product\ProductList\Toolbar">
+        <plugin name="Mons_ToolbarSorter::Block_Product_ProductList_Toolbar"
+            type="Mons\ToolbarSorter\Plugin\Block\Product\ProductList\ToolbarPlugin"
+            sortOrder="1" />
+    </type>
+</config>
