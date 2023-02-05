@@ -29,6 +29,7 @@ class ProductAttributeGridBuildObserver implements ObserverInterface
                         'index' => 'sort_by_behavior',
                         'type' => 'options',
                         'options' => [
+                            '' => '',
                             Config::ASC => __('Ascending'),
                             Config::DESC => __('Descending'),
                             Config::ASC_DESC => __('Ascending + Descending'),

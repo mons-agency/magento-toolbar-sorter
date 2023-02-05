@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright Mons Agency Ltd. Some rights reserved.
+ * See copying.md for details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Block\Adminhtml\Product\Attribute\Edit\Tab\Front">
+        <plugin
+            name="Mons_ToolbarSorter::Magento_Catalog_Block_Adminhtml_Product_Attribute_Edit_Tab_Front"
+            type="Mons\ToolbarSorter\Plugin\Block\Adminhtml\Product\Attribute\Edit\Tab\FrontPlugin"
+            sortOrder="100" />
+    </type>
+</config>

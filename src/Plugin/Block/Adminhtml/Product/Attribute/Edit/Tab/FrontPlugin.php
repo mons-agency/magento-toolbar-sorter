@@ -4,16 +4,13 @@
  * See copying.md for details.
  */
 
-namespace Mons\ToolbarSorter\Observer\Edit\Tab\Front;
+namespace Mons\ToolbarSorter\Plugin\Block\Adminhtml\Product\Attribute\Edit\Tab;
 
-use Magento\Framework\Event\Observer;
-use Magento\Framework\Event\ObserverInterface;
+use Magento\Catalog\Block\Adminhtml\Product\Attribute\Edit\Tab\Front as Subject;
+use Magento\Framework\Data\Form;
 use Mons\ToolbarSorter\Model\Attribute\Source\SorterOptions;
 
-/**
- * @deprecated left for educational purposes. Use plugin instead to set field dependencies
- */
-class ProductAttributeFormBuildFrontTabObserver implements ObserverInterface
+class FrontPlugin
 {
     /**
      * @param SorterOptions $options
@@ -23,12 +20,14 @@ class ProductAttributeFormBuildFrontTabObserver implements ObserverInterface
     ) {}
 
     /**
-     * {@inheritDoc}
+     * Add toolbar sorter behavior field
+     *
+     * @param Subject $subject
+     * @param Form $form
+     * @return array
      */
-    public function execute(Observer $observer)
+    public function beforeSetForm(Subject $subject, Form $form)
     {
-        /** @var \Magento\Framework\Data\Form\AbstractForm $form */
-        $form = $observer->getForm();
         /** @var \Magento\Framework\Data\Form\Element\Fieldset $fieldset */
         $fieldset = $form->getElement('front_fieldset');
 
@@ -46,6 +45,14 @@ class ProductAttributeFormBuildFrontTabObserver implements ObserverInterface
                 ],
                 'used_for_sort_by'
             );
+
+            // define field dependencies
+            $subject->getChildBlock('form_after')
+                ->addFieldMap('used_for_sort_by', 'used_for_sort_by')
+                ->addFieldMap('sort_by_behavior', 'sort_by_behavior')
+                ->addFieldDependence('sort_by_behavior', 'used_for_sort_by', '1');
         }
+
+        return [$form];
     }
 }

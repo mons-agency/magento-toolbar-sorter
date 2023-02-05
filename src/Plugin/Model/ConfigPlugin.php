@@ -25,20 +25,19 @@ class ConfigPlugin
      * @param [] $_options
      * @return []
      */
-    public function afterGetAttributeUsedForSortByArray(Subject $subject, $_options)
+    public function afterGetAttributeUsedForSortByArray(Subject $subject, $options)
     {
+        // create a new set of options
         $options = [];
 
-        // better label
+        // insert position with a better label
         $options[Config::POSITION_CODE] = $this->config->getPositionLabel();
 
         foreach ($subject->getAttributesUsedForSortBy() as $attribute) {
             $code = (string)$attribute->getAttributeCode();
             $label = (string)$attribute->getStoreLabel();
-            $behavior = (string)$attribute->getSortByBehavior();
+            $behavior = $attribute->getSortByBehavior();
 
-            // remove sorting options
-            unset($options[$code]);
 
             // new sorting options
             switch ($behavior) {

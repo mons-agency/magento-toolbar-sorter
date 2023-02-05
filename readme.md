@@ -17,10 +17,11 @@ Customize and optimize the default product listing sort by, include the directio
 
 ### Options
 
-__ascending__: show only the option for ascending (from low to high) order
-__descending__: show only the option for descending (from high to low) order
-__ascending + descending__: show both the options above, ascending first
-__descending + ascending__: show both the options, descending first
+* __Default (do not override)__: use Magento's default sorting setting (normally ascending)
+* __Ascending__: show only the option for ascending (from low to high) order
+* __Descending__: show only the option for descending (from high to low) order
+* __Ascending + Descending__: show both the options above, ascending first
+* __Descending + Ascending__: show both the options, descending first
 
 ### Theming
 

@@ -18,6 +18,10 @@ class SorterOptions implements OptionSourceInterface
     {
         return [
             [
+                'value' => '',
+                'label' => __('Default (do not override)'),
+            ],
+            [
                 'value' => Config::ASC,
                 'label' => __('Ascending'),
             ],
